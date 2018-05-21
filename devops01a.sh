@@ -12,5 +12,4 @@ echo "==========Amount of RAM============================="
 system_profiler SPHardwareDataType | grep 'Memory'
 
 echo "==========Your MAC Address and IP Addresss=========="
-
 ifconfig en1 | grep -w 'ether\|inet'
