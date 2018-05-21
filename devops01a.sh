@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# this is the second assignment
-
 echo "==========Volumes=================================="
 df -h
 
