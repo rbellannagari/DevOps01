@@ -11,5 +11,5 @@ echo "==========Amount of RAM============================="
 #sysctl -h hw.memsize
 system_profiler SPHardwareDataType | grep 'Memory'
 
-echo "==========Your MAC Address and IP Addresss=========="
+echo "========== MAC Address and IP Addresss=============="
 ifconfig en1 | grep -w 'ether\|inet'
