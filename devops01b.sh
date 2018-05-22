@@ -1,16 +1,32 @@
 #!/bin/sh
 # This is checking cronjob
 
-echo "==========Volumes=================================="
+func01(){
+
+if [ -n "$1" ]
+
+echo "volumes""
 df -h
 
-echo "==========Number of Cpu/Cores======================="
-#sysctl -n hw.logicalcpu hw.physicalcpu machdep.cpu.brand_string
+if [ -n "$2" ]
+echo "Cpu"
 system_profiler SPHardwareDataType | grep 'Processor Name:\|Total Number of Cores'
 
-echo "==========Amount of RAM============================="
-#sysctl -h hw.memsize
+if [ -n "$3" ]
+echo "RAM"
 system_profiler SPHardwareDataType | grep 'Memory'
 
-echo "========== MAC Address and IP Addresss=============="
+if [ -n "$4" ]
+echo "Network"
 ifconfig en1 | grep -w 'ether\|inet'
+
+if [ -n "$@" ]
+
+fi
+fi
+fi
+fi
+fi
+
+}
+
